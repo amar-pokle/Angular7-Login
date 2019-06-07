@@ -1,0 +1,81 @@
+ <div class="container-fluid" style="height:200vh;" >
+    <div class="row">
+        <div class="col-12">
+          <form [formGroup]="registerForm" (submit)="onSubmit1()"  class="login-form " >          
+                <section *ngIf="phaseToggle">                    
+                    <div class="input-group mb-3 custom-input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"  ><mat-icon>person</mat-icon></span>
+                        </div>
+                        <input type="email" id="textEmail"  formControlName="email" class="form-control" (change)="valid($event)"  style="text-align: left;"   placeholder="Enter Email" required/>
+ 
+                        <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage('user')}}</mat-error> -->
+                      </div>
+                                        
+                      <div class="input-group mb-3  custom-input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" ><mat-icon>lock</mat-icon></span>
+                        </div>
+                        <input type="password" id="textPass"  formControlName="password" class="form-control"   style="text-align: left;"  placeholder="Enter password" required>
+                        <!-- <mat-error *ngIf="password.invalid">{{getErrorMessage('pass')}}</mat-error> -->
+                      </div>
+                                          
+                      <div class="input-group mb-3  custom-input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" ><mat-icon>lock</mat-icon></span>
+                          </div>
+                          <input type="password" id="confirmpass"   formControlName="confirmpassword" class="form-control"  style="text-align: left;"  placeholder="Re-Enter password" required>
+
+                      </div>
+                     
+                    <button mat-flat-button class="col-12 primary-btn"  type="submit">NEXT</button>
+                </section>        
+             </form>
+
+
+          <!-- Second Form -->
+             <form [formGroup]="registerForm1" (submit)="register()">
+              <section *ngIf="!phaseToggle" >
+                <div class="input-group mb-3   custom-input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><mat-icon>person</mat-icon></span>
+                    </div>
+                    <input type="text" id="firstName" formControlName="firstname" class="form-control"   style="text-align: left;"  placeholder="Enter first name" required/>
+                  </div>
+                  <div class="input-group mb-3 custom-input-group">
+                      <div class="input-group-prepend ">
+                        <span class="input-group-text"><mat-icon>person</mat-icon></span>
+                      </div>
+                      <input type="text" id="lastName" formControlName="lastname" class="form-control"  style="text-align: left;"  placeholder="Enter last name" required/>
+                    </div>
+                    <div class="input-group mb-3 custom-input-group ">
+                        <div class="input-group-prepend ">
+                          <span class="input-group-text"><mat-icon>date_range</mat-icon></span>
+                        </div>
+                        <input type="date" id="date"   formControlName="dob" class="form-control"  style="text-align: left;"  placeholder="MM/DD/YYYY" required/>
+                      </div>
+                      <div class="input-group mb-3 custom-input-group ">
+                          <div class="input-group-prepend ">
+                            <span class="input-group-text"><mat-icon>stay_primary_portrait</mat-icon></span>
+                          </div>
+                          <input type="number"  id="mob"  formControlName="mobile" class="form-control"  style="text-align: left;"  placeholder="Enter mobile" required/>
+                        </div>
+                        <button mat-flat-button class="col-12 primary-btn"  type="submit" >Register</button>
+                  </section>      
+             </form>
+            </div>
+        
+          </div>
+          
+          <div>
+             
+              <p class="text-primary text-center m-0 mt-2">Already have an account? <a href="login">Sign in.</a></p>
+          </div>
+            </div>
+
+        
+         
+  
+         
+      
+          

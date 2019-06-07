@@ -1,0 +1,247 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~ngx-toastr/toastr';
+
+html, body{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    min-width: 320px;
+}
+.app-footer{
+   position: fixed;bottom: 0px;z-index: 99;
+}
+.toolbar-spacer {
+    flex: 1 1 auto;
+  }
+  #bottom-navigation{
+       .mat-tab-label-container{
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 99999;
+            background-color: white;
+            border-top: 1px solid #ccc;
+       }
+       .mat-tab-labels{
+           width: 100vw;
+       }
+       .mat-tab-label{
+            min-width: 20%;
+            width: 20%;
+            max-width: 20%;
+            line-height: 12px;
+            .mat-tab-label-content,span{
+                display: block;
+            }
+            span.title{
+                font-size: 11px;
+            }
+       }
+       .mat-ink-bar{
+           visibility: hidden!important;
+       }
+  }
+.custom-input-group{
+    .input-group-text{
+      background-color: #e5e5e5;
+      color: #000000;
+    }
+    input.form-control{
+         background-color: #E5E5E5;
+        text-align: center;
+        border: none;
+    }
+    }
+
+.mat-tab-header-pagination-controls-enabled .mat-tab-header-pagination
+.custom-text-field{
+    
+    
+    box-sizing: border-box;
+    border: 1px solid #A1A1A1;
+    background: #E5E5E5;
+    width:100%;
+    height: 36px;
+    overflow: hidden;
+    fill: rgba(255,255,255,1);
+    text-align: center;
+    border: none;
+}
+.input-group mb-3 {
+   
+    margin-right: auto;
+    display: block;
+   
+}
+.login-form{
+    // margin-top:75%;
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: #ccc;
+    padding-top: 290px;
+}
+.primary-btn{
+    background-color: #3188FF!important;
+    color: #ffffff!important;
+    
+}
+.text-primary{
+    color: #FFFFFF!important;
+}
+.input-group-text{
+    border: none;
+}
+.mat-toolbar{
+ background-color: rgba(69,115,154,1);
+display: block;
+margin-right: auto;
+
+    width: 401.562px;
+    height: 17px;
+    left: 7.5px;
+    top: 0.5px;
+    overflow: visible;
+}
+
+
+#home-tab-group {
+    .mat-tab-label{
+        background-color: rgba(69,115,154,1)!important;
+        color: #cccccc;
+        // min-width:20%; 
+        height:25px;
+        font-size: 10px;
+        // display: none;
+        padding: 0 15px!important;
+        opacity: 1;
+        // min-width: auto;  
+    } 
+    .mat-tab-label-active{color: white;}
+}
+
+#follow-profile-tab-group {
+    .mat-tab-label{
+        background-color:white!important;
+        color: #ccc;
+        min-width:20%; 
+        height:25px;
+        font-size: 10px;
+         //display: none;
+        padding: 0 15px!important;
+        opacity: 1;
+        // min-width: auto;  
+    } 
+    .mat-tab-label-active{color: black;}
+    .mat-ink-bar{
+        background-color: #d06a6a;
+        display: none;
+        visibility: hidden!important;
+    }
+}
+.mat-tab-header-pagination-controls-enabled .mat-tab-header-pagination {
+    display: none!important;
+}
+
+
+// .owl-carousel {
+//   width: 100% !important;
+//   margin: 10% auto;
+//   margin-top: 20px;
+// }
+ 
+.owl-carousel .owl-nav {
+  overflow: hidden;
+  height: 0px;
+ 
+}
+ 
+.owl-carousel .nav-btn {
+  height: 47px;
+  position: absolute;
+  width: 26px;
+  cursor: pointer;
+  top: 30% !important;
+  margin-top:2px;
+}
+ 
+.owl-carousel .owl-prev.disabled,
+.owl-carousel .owl-next.disabled {
+  pointer-events: none;
+  opacity: 0.2;
+}
+ 
+// .owl-carousel .prev-slide {
+//   background: url(./assets/images/nav-icon.png) no-repeat scroll 0 0;
+//   left: -33px;
+// }
+ 
+// .owl-carousel .next-slide {
+//   background: url(./assets/images/nav-icon.png) no-repeat scroll -24px 0px;
+//   right: -33px;
+// }
+ 
+.owl-carousel .prev-slide:hover {
+  background-position: 0px -53px;
+}
+ 
+.owl-carousel .next-slide:hover {
+  background-position: -24px -53px;
+}
+
+#profile_tab_group{
+    .mat-tab-label{ min-width: 50%!important;height:25px;}
+    .mat-tab-label-active{background-color: #d06a6a;opacity: 1;color: white}
+    .mat-ink-bar{
+        background-color: #d06a6a;
+        display: none;
+    }
+}
+@media(max-width:575px){
+
+}
+@media(min-width:576px)and (max-width:767px){
+    // #home-tab-group .mat-tab-label{
+    //     background-color: rgba(69,115,154,1)!important;
+    //     color: #ffffff;
+    //     height:25px;
+    //     font-size: 10px;
+    //     padding: 0 15px!important;
+    //     opacity: unset;
+    //     min-width: auto;
+        
+        
+    // }
+}
+@media(min-width:768px)and (max-width:991px){
+    #home-tab-group .mat-tab-label{
+        background-color: rgba(69,115,154,1)!important;
+        color: #ffffff;
+        height:25px;
+        font-size: 10px;
+        padding: 0 15px!important;
+        opacity: unset;
+        min-width: 20%;
+        
+        
+    }
+}
+@media(min-width:992px)and (max-width:1199px){
+    #home-tab-group .mat-tab-label{
+        background-color: rgba(69,115,154,1)!important;
+        color: #ffffff;
+        height:25px;
+        font-size: 10px;
+        padding: 0 15px!important;
+        opacity: unset;
+        min-width: 20%;
+        
+        
+    }
+    
+}
+@media(min-width:1200px){
+    
+}
